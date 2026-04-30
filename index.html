@@ -133,12 +133,12 @@
                     let nameStr = namePart[1].split('.')[0]; 
                     names = nameStr.split(',').map(n => n.trim()).filter(n => n);
                 } else {
-                    // Try parsing "A, B, C" if no colon
+                    // Try parsing "Huân, Bảo, Phú" if no colon
                     names = text.split(',').map(n => n.trim()).filter(n => n && n.length < 20);
                 }
                 
                 if (names.length === 0) {
-                    alert("Không tìm thấy tên người chơi. Vui lòng nhập theo định dạng: A, B, C...");
+                    alert("Không tìm thấy tên người chơi. Vui lòng nhập theo định dạng: Huân, Bảo, Phú...");
                     return;
                 }
                 
@@ -178,7 +178,7 @@
                     </h3>
                     <textarea 
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-sm transition"
-                        placeholder="Ví dụ: Tạo giải đấu cho 8 người: A, B, C, D, E, F, G, H. Đấu đôi random, 2 sân, mỗi trận 15 phút"
+                        placeholder="Ví dụ: Tạo giải đấu cho 8 người: Huân, Bảo, Phú, Vinh, Sơn, Đức, Đạt, Hiếu. Đấu đôi random, 2 sân, mỗi trận 15 phút"
                         rows="3"
                         value={text}
                         onChange={(e) => setText(e.target.value)}
